@@ -411,6 +411,9 @@ APIs:
    | :attr:`%d`        | int                 | Equivalent to                    |
    |                   |                     | ``printf("%d")``. [1]_           |
    +-------------------+---------------------+----------------------------------+
+   | :attr:`%i`        | int                 | Equivalent to                    |
+   |                   |                     | ``printf("%i")``. [1]_           |
+   +-------------------+---------------------+----------------------------------+
    | :attr:`%u`        | unsigned int        | Equivalent to                    |
    |                   |                     | ``printf("%u")``. [1]_           |
    +-------------------+---------------------+----------------------------------+
@@ -441,11 +444,11 @@ APIs:
    | :attr:`%zu`       | size_t              | Equivalent to                    |
    |                   |                     | ``printf("%zu")``. [1]_          |
    +-------------------+---------------------+----------------------------------+
-   | :attr:`%i`        | int                 | Equivalent to                    |
-   |                   |                     | ``printf("%i")``. [1]_           |
-   +-------------------+---------------------+----------------------------------+
    | :attr:`%x`        | int                 | Equivalent to                    |
    |                   |                     | ``printf("%x")``. [1]_           |
+   +-------------------+---------------------+----------------------------------+
+   | :attr:`%X`        | int                 | Equivalent to                    |
+   |                   |                     | ``printf("%X")``. [1]_           |
    +-------------------+---------------------+----------------------------------+
    | :attr:`%s`        | const char\*        | A null-terminated C character    |
    |                   |                     | array.                           |
@@ -487,8 +490,8 @@ APIs:
       characters for ``"%A"``, ``"%U"``, ``"%S"``, ``"%R"`` and ``"%V"``
       (if the ``PyObject*`` argument is not ``NULL``).
 
-   .. [1] For integer specifiers (d, u, ld, li, lu, lld, lli, llu, zd, zi,
-      zu, i, x): the 0-conversion flag has effect even when a precision is given.
+   .. [1] For integer specifiers (d, i, u, ld, li, lu, lld, lli, llu, zd, zi, zu,
+      x, X): the 0-conversion flag has effect even when a precision is given.
 
    .. versionchanged:: 3.2
       Support for ``"%lld"`` and ``"%llu"`` added.

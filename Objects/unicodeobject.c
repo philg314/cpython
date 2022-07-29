@@ -2440,6 +2440,7 @@ unicode_fromformat_arg(_PyUnicodeWriter *writer,
     case 'd':
     case 'u':
     case 'x':
+    case 'X':
     {
         /* used by sprintf */
         char buffer[MAX_LONG_LONG_CHARS];
@@ -2461,6 +2462,9 @@ unicode_fromformat_arg(_PyUnicodeWriter *writer,
         }
         else if (*f == 'x') {
             len = sprintf(buffer, "%x", va_arg(*vargs, int));
+        }
+        else if (*f == 'X') {
+            len = sprintf(buffer, "%X", va_arg(*vargs, int));
         }
         else {
             if (longflag) {
