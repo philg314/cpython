@@ -3229,8 +3229,8 @@ test_string_from_format(PyObject *self, PyObject *Py_UNUSED(ignored))
     CHECK_FORMAT_0("%00%", "%");
     CHECK_FORMAT_0( "%2%", "%");
     CHECK_FORMAT_0("%02%", "%");
-    CHECK_FORMAT_0("%.0%", "%.0%");
-    CHECK_FORMAT_0("%.2%", "%.2%");
+    CHECK_FORMAT_0("%.0%", "%");
+    CHECK_FORMAT_0("%.2%", "%");
 
     // "%c"
     CHECK_FORMAT_1(  "%c", "c", 'c');

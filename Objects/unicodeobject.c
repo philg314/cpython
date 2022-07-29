@@ -2392,10 +2392,6 @@ unicode_fromformat_arg(_PyUnicodeWriter *writer,
                 f++;
             }
         }
-        if (*f == '%') {
-            /* "%.3%s" => f points to "3" */
-            f--;
-        }
     }
     if (*f == '\0') {
         /* bogus format "%.123" => go backward, f points to "3" */
